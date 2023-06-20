@@ -1,98 +1,90 @@
-# Phase_4_project
-# Title 
-A Time Series Analysis of Real Estate Prices in Top 5 Zip Codes"
-
-# Project overview <br>
-In these project we shall seek to do the following :
-
-* Load the dataset
-* Understand the dataset
-* Choose our target variable.
-* Prepare the dataset (Example : Cleaning the dataset , checking for multicollinearity)
-* Encode our categorical variables
-* Make several models
-* Evaluate our models
-* Use our models for prediction
-* Come up with relevant findings.
-* 
- # Main Objective <br>
-* The main objective of this project is to identify the top 5 zip codes that offer the best investment potential in terms of real estate prices. By analyzing historical trends and patterns, the project aims to provide actionable insights to the investment firm, enabling them to make informed decisions on where to allocate their resources.
-
-# Specific Objectives <br>
-1. Analyze Historical Data: The project involves analyzing the historical data of real estate prices across different zip codes. This includes understanding the trends, patterns, and fluctuations in property values over time.
-
-2. Identify Promising Zip Codes: Using the analysis of historical data, the project aims to identify the zip codes that have shown consistent growth, stability, or potential for future appreciation. These zip codes are considered the most favorable for investment.
-
-3. Consider Location Factors: In addition to the historical performance, the project also takes into account location-specific factors such as city, state, and metro. This information helps assess the overall desirability and attractiveness of the investment opportunities.
-
-4. Evaluate Market SizeRank: The SizeRank attribute provides insights into the relative size and competitiveness of the real estate market in each zip code. This factor helps gauge the potential opportunities and risks associated with investing in a particular area.
-
-#  Data Understanding
-
-The dataset contains information on various attributes, including RegionID, RegionName, City, State, Metro, SizeRank, CountyName, and value (real estate prices). Our dataset is the Zillow Housing Dataset which was sourced from Zillow Research Page.<br>
-## Column Name	Description
-* RegionID -This is unique Id for the Regions<br>
-* SizeRank -This is the ranking done based on the size of the region<br>
-* RegionName -	This field contains the zip code of the region.<br>
-* RegionType-	Type of region is Zip.<br>
-* StateName	- State<br>
-* City	- This column provide the specific City Name of Housing Data<br>
-* Metro	- This provide the name of the metro city around that region<br>
-* County Name	- This is the county name for that region<br>
-* Months Column	- These columns contains the prices of region for every month<br>
-
-# Libraries
-* PYTHON- Programming language
-* PANDAS- Exploratory data analysis
-* SEABORN- Visualization
-* NUMPY - Numerical computing and data analysis
-* MATPLOTLIB- Visualization
-* STATSMODELS-statistical analysis and modeling
-* SCIKIT LEARN- machine learning
-* SCIPY- scientific computing
-* MATH- basic mathematical operations
-* 
-# Exploratory Data Analysis
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/8fe0337e-7f1c-467a-bb50-8b07ee836a9f)
+# PHASE 4 PROJECT: REAL ESTATE TIME SERIES ANALYSIS.
+# **1). Business Understanding**
 
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/eb6640b7-72c5-499b-acc1-ef1c5256ad53)
+Real estate investment is a lucrative and dynamic industry that requires careful analysis and decision-making. The fictional real estate investment firm is seeking guidance on identifying the top 5 zip codes for investment opportunities. To address this question, historical data from Zillow Research is utilized.
+## **i) Background:**
 
+Real estate investment is a lucrative and dynamic industry that requires careful analysis and decision-making. The fictional real estate investment firm is seeking guidance on identifying the top 5 zip codes for investment opportunities. To address this question, historical data from Zillow Research is utilized. The dataset contains information on various attributes, including RegionID, RegionName, City, State, Metro, SizeRank, CountyName, and value (real estate prices).
 
+## **ii). Main Objective:**
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/977d46fe-cc69-46be-8acd-439750b7506c)
+The main objective of this project is to identify the top 5 zip codes that offer the best investment potential in terms of real estate prices. By analyzing historical trends and patterns, the project aims to provide actionable insights to the investment firm, enabling them to make informed decisions on where to allocate their resources.
 
+### **Specific Objectives:**
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/868ff9c0-8cde-46e7-845e-8cbbaf859c0a)
+* Analyze Historical Data: The project involves analyzing the historical data of real estate prices across different zip codes. This includes understanding the trends, patterns, and fluctuations in property values over time.
 
+* Identify Promising Zip Codes: Using the analysis of historical data, the project aims to identify the zip codes that have shown consistent growth, stability, or potential for future appreciation. These zip codes are considered the most favorable for investment.
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/591be7bc-d5f6-4450-96c1-e8aa72e3c31c)
+* Consider Location Factors: In addition to the historical performance, the project also takes into account location-specific factors such as city, state, and metro. This information helps assess the overall desirability and attractiveness of the investment opportunities.
 
-# Modelling
+* Evaluate Market SizeRank: The SizeRank attribute provides insights into the relative size and competitiveness of the real estate market in each zip code. This factor helps gauge the potential opportunities and risks associated with investing in a particular area.
 
-## ACF & PACF
+  # **2)**. **Data Understanding**
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/7af45f54-a62c-4893-9d89-d2ea0abf34b8)
+The dataset contains information on various attributes, including RegionID, RegionName, City, State, Metro, SizeRank, CountyName, and value (real estate prices). Our dataset is the Zillow Housing Dataset which was sourced from Zillow Research Page.
 
+In order to understand what our dataset looks like let us get a preview of this data by loading it.
+## **3). Data Preparation**
+This is to make the data in a format that is good to feed to our model. It involves the following series of steps:<br>
+* Cleaning the data<br>
+* Checking for and dealing with missing values<br>
+* Reshaping our dataset from wide to long format<br>
+  # 4). Exploratory Data Analysis
+  This is basically trying to figure out more about our data, its behaviors, and patterns
+  This involves the following:<br>
+  * Grouping the data by month.
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/08641225-73aa-4a75-babb-2e207ca2fc2a)
+    ![Read Me monthly Eda](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/94025eda-57c4-4d90-88b1-45ee2fda561e)
 
-# Forecasts
+  * Group the data yearly.
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/44b5c80f-51b9-4490-be03-0bca148295ae)
+    ![Eda Yearly plot](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/640741c3-0b51-42fe-8224-55f09e25970f)
+* Grouping per quarter and plotting.
 
+  ![quarterly plot](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/419a39da-127a-4022-a6dc-d56a126a3dc8)
+  * Grouping per decade
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/a996e237-66dd-423d-87cc-32be939245ad)
+![Eda per decade](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/d42ade3e-12ee-4f54-a18a-de11d1f4685b)
+  *  Finding the top 5 Best regions
 
+  Here we seek to find the five best regions by using the return on investment, where high returns show the best regions. Below is a plot of our findings
 
-![image](https://github.com/rotichnaomi/Phase_4_project/assets/122217304/c01ece0f-4a40-4877-9298-98a962b8fa4e)
+  ![ROI](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/8808016c-6de8-4e97-8c8a-09a75de545fd)
+  * Checking for trends and seasonality
+    Here we seek to find the relevant trends in the dataset, based on the best regions, below are our plots
 
+    ![Line plot](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/8be22aa7-0b70-41aa-a581-e49687592fd7)
+    * Checking for the rolling statistics <br>
+    * Performing Dullers test. <br>
+    * Checking for stationarity <br>
+    * Detrending our dataset <br>
+    * Deseasonalizing our dataset <br>
+    * Performing Seasonal decomposition <br>
+    ## **5). Modeling**
+    This is now creating various models to forecast our data. we created the following models :
+    * ARIMA modelels <br>
+    *  SARIMAX models. <br>
+    *  PROPHET models. <br>
+      First, we plot the auto-correlation plots, then we do the modeling.
+1. **Arima Models** <br>
+ We created an Arima model, below are the statistical results.<br>
+   <img width="553" alt="Arima" src="https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/c7a99ee9-2f65-4486-8512-1f8dfa89a7a5">
+2. **Sarimax Models**<br>
+Below is the statistical result using the Sarimax models.
 
- # Findings
+<img width="586" alt="Sarimax" src="https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/75da97a4-b36d-409f-899d-910667e9e3d1">
 
- # Findings
+Below is a plot of the actual and predicted values of our Sarimax model with a 1.94 RMSE <br>
 
-After performing a time series analysis on the 10 zip codes and forecasting total returns for up to three years, we recommend the company invest in the following 3 zip codes:
+![Sarimax](https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/627564a9-335e-471a-909a-d45ef0d31f11)
+3. ** Prophet Models**
+We used this model to forecast and predict values, below are some of  our predicted values (**Note: The yhat means the predicted values**)  <br>
+<img width="257" alt="Prophet model" src="https://github.com/learn-co-curriculum/dsc-data-visualization-with-pandas/assets/109750154/13c9cebc-349b-4165-8c0c-c8a7f97a2028">
+
+   ## 7). Summary
+   After performing a time series analysis on the 10 zip codes and forecasting total returns for up to three years, we recommend the company invest in the following 3 zip codes:
 
 * 81611 - Location: Aspen, CO             (R.O.I - 132.378817)
 
@@ -102,21 +94,3 @@ After performing a time series analysis on the 10 zip codes and forecasting tota
 
 
 As for the other 6 zip codes, they are not fit for investment given the negative returns.
-
-# Recommendations
-
-We recommend investing in the following regions :
-
-* 81611 - Location: Aspen, CO     
-
-* 10021 - Location: New York, NY   
-
-* 34102 - Location: Naples, FL 
-
-This is because these regions have positive returns on investments, unlike the other areas.
-
-
-
-
-
-
