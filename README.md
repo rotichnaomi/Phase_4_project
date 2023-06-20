@@ -24,6 +24,16 @@ The main objective of this project is to identify the top 5 zip codes that offer
   # **2)**. **Data Understanding**
 
 The dataset contains information on various attributes, including RegionID, RegionName, City, State, Metro, SizeRank, CountyName, and value (real estate prices). Our dataset is the Zillow Housing Dataset which was sourced from Zillow Research Page.
+## Column Name	Description
+* RegionID -This is a unique Id for the Regions<br>
+* SizeRank -This is the ranking done based on the size of the region<br>
+* RegionName -	This field contains the zip code of the region.<br>
+* RegionType-	The type of region is Zip.<br>
+* StateName	- State<br>
+* City	- This column provides the specific City Name of Housing Data<br>
+* Metro	- This provides the name of the metro city around that region<br>
+* County Name	- This is the county name for that region<br>
+* Months Column	- These columns contain the prices of the region for every month<br>
 
 In order to understand what our dataset looks like let us get a preview of this data by loading it.
 ## **3). Data Preparation**
